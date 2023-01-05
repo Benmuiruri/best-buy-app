@@ -9,19 +9,19 @@ class BestBuyAppTest < Minitest::Test
 
   def test_index
     get '/'
-    assert last_response.ok?
-    assert doc(last_response).at_css('h1').text.include?('Best Buy')
+    assert_equal 200, last_response.status
+    assert_includes doc(last_response).at_css('h1').text, 'Best Buy'
   end
 
   def test_about
     get '/about'
-    assert last_response.ok?
-    assert doc(last_response).at_css('h1').text.include?('About')
+    assert_equal 200, last_response.status
+    assert_includes doc(last_response).at_css('h1').text, 'About'
   end
 
   def test_compare
     get '/compare'
-    assert last_response.ok?
-    assert doc(last_response).at_css('h1').text.include?('Price Comparison')
+    assert_equal 200, last_response.status
+    assert_includes doc(last_response).at_css('h1').text, 'Price Comparison'
   end
 end
