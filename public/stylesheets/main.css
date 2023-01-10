@@ -34,7 +34,7 @@ p {
   margin: 4em auto 1em;
 }
 .header-logo img {
-  width: 4em;
+  width: 10em;
 }
 .header {
   background-color: #fff;
@@ -71,7 +71,7 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 60%;
 }
 .form-submit {
   background-color: #7292b0;
