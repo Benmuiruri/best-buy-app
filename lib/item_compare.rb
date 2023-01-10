@@ -6,16 +6,14 @@ class ItemComparison
     @large_item = large_item
   end
 
-  def compare
+   def compare
     if @small_item.price_per_gram < @large_item.price_per_gram
-      puts "The smaller item is the better value."
+      return "The smaller item is the better value."
     elsif @small_item.price_per_gram > @large_item.price_per_gram * 1.25
-      puts "The larger item is the better value."
       difference = ((@small_item.price_per_gram - @large_item.price_per_gram) / @large_item.price_per_gram) * 100
-      puts "The smaller item is #{difference.round(2)}% more expensive."
+      return "The larger item is the better value. The smaller item is #{difference.round(2)}% more expensive."
     else
-      puts "The two items are not significantly different in value."
-      puts 'It is not worth spending more money on the larger item.'
+      return "The two items are not significantly different in value. It is not worth spending more money on the larger item."
     end
   end
 end

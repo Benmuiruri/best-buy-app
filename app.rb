@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'pry'
+require_relative 'lib/purchase_helper'
 
 get '/' do
   @title = 'Home'
@@ -16,5 +18,6 @@ get '/compare' do
 end
 
 post '/check' do
-  raise params.inspect
+  @results = compare
+  erb :result
 end

@@ -11,9 +11,9 @@ class ItemDiscount
     discount = price_difference.to_f / @large_item.price * 100
 
     if discount > 0
-      puts "You will save #{price_difference}sh by buying the larger item instead of two small items."
+      return "You will save #{price_difference}sh by buying the larger item instead of two small items."
     else
-      puts "You will save #{price_difference.abs}sh by buying two of the smaller item."
+      return "You will save #{price_difference.abs}sh by buying two of the smaller item."
     end
   end
 end

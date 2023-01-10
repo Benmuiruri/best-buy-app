@@ -12,4 +12,5 @@ group :test do
   gem 'rack-test',          '1.1.0'
   gem 'rake',               '13.0.6'
   gem 'nokogiri',           '1.13.3'
+  gem 'pry'
 end
