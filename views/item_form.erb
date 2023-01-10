@@ -1,0 +1,18 @@
+<form id="price_compare" action="/check" method="post">
+  <label for="product_name">Product Name:</label>
+  <input type="text" id="product_name" name="product_name" required>
+  <br>
+  <label for="small_price">Price of Small Size:</label>
+  <input type="number" id="small_price" name="small_price" min="0" required>
+  <br>
+  <label for="small_weight">Weight of Small Size:</label>
+  <input type="number" id="small_weight" name="small_weight" min="0" required>
+  <br>
+  <label for="large_price">Price of Large Size:</label>
+  <input type="number" id="large_price" name="large_price" min="0" required>
+  <br>
+  <label for="large_weight">Weight of Large Size:</label>
+  <input type="number" id="large_weight" name="large_weight" min="0" required>
+  <br>
+  <button class="form-submit" type="submit">Find the best buy</button>
+</form>
