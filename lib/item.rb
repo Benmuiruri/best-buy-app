@@ -1,9 +1,14 @@
 class Item
   attr_reader :price, :weight
 
-  def initialize(price, weight)
+  def initialize(name, price, weight)
+    @name = name
     @price = price
     @weight = weight
+  end
+
+  def item_name
+    @name
   end
 
   def price_per_gram

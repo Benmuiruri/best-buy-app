@@ -8,13 +8,13 @@ Making purchase decisions while shopping can be overwhelming and time-consuming,
 ## Preview
 
 <img src="./public/images/compare_form.png">
-<img src="./public/images/results.png">
+<img src="./public/images/compare_results.png">
 
 ### General Overview
 
 With Best Buy App, you can compare the prices of different sizes of the same product and see which one offers the most value based on weight and cost. Simply enter the price and weight of the small and large sizes, and the app do the rest. It will even tell you if it's worth spending more money on the larger item, or if you're better off sticking with the smaller size.
 
-## Getting Started
+### Getting Started
 
 _To get a local copy up and running follow these simple steps._
 
@@ -35,7 +35,7 @@ _To get a local copy up and running follow these simple steps._
    bundle exec rerun app.rb
    ```
 
-# Testing
+### Testing
 
 `bundle exec rake test` will run all the tests.
 
@@ -46,14 +46,14 @@ _To get a local copy up and running follow these simple steps._
 - Twitter: [Optimize](https://twitter.com/_optimize) - Follow me on Twitter I will make your Timeline a bit more interesting
 - LinkedIn: [Ben Kiarie](https://www.linkedin.com/in/benjamin-kiarie-180b66149/) - Connect with me on LinkedIn lets expand our network for mutual benefits.
 
-# 🤝 Contributing
+### 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-# Show your support
+### Show your support
 
 Give a ⭐️ if you like this project!
 
-# 📝 License and Intellectual Property
+### 📝 License and Intellectual Property
 
 Copyright (c) 2023 Ben Kiarie (ben.muiruri13@gmail.com) Released under the MIT licence.
