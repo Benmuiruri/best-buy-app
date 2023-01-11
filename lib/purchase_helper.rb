@@ -4,6 +4,7 @@ require_relative 'item'
 require_relative 'item_compare'
 require_relative 'item_discount'
 
+# PurchaseHelper class to compare items and calculate discount
 class PurchaseHelper
   def compare(params)
     product_name = params[:product_name]

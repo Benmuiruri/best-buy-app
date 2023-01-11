@@ -2,6 +2,7 @@
 
 require_relative 'item'
 
+# ItemComparison class to compare the value of two Items
 class ItemComparison
   THRESHOLD = 0.25
 

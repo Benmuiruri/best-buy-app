@@ -2,6 +2,7 @@
 
 require_relative 'item'
 
+# ItemDiscount class to calculate discount saved by choosing one item over another
 class ItemDiscount
   def initialize(small_item, large_item)
     @small_item = small_item

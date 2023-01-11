@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Item class to instantiate an Item
 class Item
   attr_reader :price, :weight
 
