@@ -7,7 +7,7 @@ Making purchase decisions while shopping can be overwhelming and time-consuming,
 
 ## Preview
 
-<img src="./public/images/compare_form.png">
+<img src="./public/images/compare_input.png">
 <img src="./public/images/compare_results.png">
 
 ### General Overview
