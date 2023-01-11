@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sinatra'
 require 'sinatra/param'
 require_relative 'lib/purchase_helper'

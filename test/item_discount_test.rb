@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require_relative 'test_helper'
 
 class ItemDiscountTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    @small_item = Item.new("soda", 80, 100)
-    @large_item = Item.new("soda", 100, 200)
+    @small_item = Item.new('soda', 80, 100)
+    @large_item = Item.new('soda', 100, 200)
     @product_name = @small_item.item_name
   end
 

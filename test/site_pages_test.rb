@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'test_helper'
 
 class BestBuyAppTest < Minitest::Test
@@ -26,7 +28,7 @@ class BestBuyAppTest < Minitest::Test
   end
 
   def test_check
-    post '/check', product_name: "soda", small_price: 80, small_weight: 100, large_price: 150, large_weight: 120
+    post '/check', product_name: 'soda', small_price: 80, small_weight: 100, large_price: 150, large_weight: 120
     assert_equal 200, last_response.status
     result = 'The smaller soda is the better value.'
     assert_equal result, doc(last_response).at_css('p').text

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Item
   attr_reader :price, :weight
 
@@ -12,7 +14,7 @@ class Item
   end
 
   def price_per_gram
-    raise 'weight cannot be zero' if @weight == 0
+    raise 'weight cannot be zero' if @weight.zero?
 
     @price.to_f / @weight
   end
