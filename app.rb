@@ -18,6 +18,6 @@ get '/compare' do
 end
 
 post '/check' do
-  @results = compare
+  @results = PurchaseHelper.new.compare(params)
   erb :result
 end

@@ -24,4 +24,11 @@ class BestBuyAppTest < Minitest::Test
     assert_equal 200, last_response.status
     assert_includes doc(last_response).at_css('h1').text, 'Price Comparison'
   end
+
+  def test_check
+    post '/check', small_price: 80, small_weight: 100, large_price: 150, large_weight: 120
+    assert_equal 200, last_response.status
+    result = 'The smaller item is the better value.'
+    assert_equal result, doc(last_response).at_css('p').text
+  end
 end
