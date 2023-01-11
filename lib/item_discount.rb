@@ -10,14 +10,17 @@ class ItemDiscount
   end
 
   def discount
-    product_name = @small_item.item_name
-    price_difference = @large_item.price - @small_item.price * 2
-    if price_difference.positive?
-      "You will only save #{price_difference}sh by buying the larger #{product_name} instead of two small #{product_name}s and not get much value."
-    elsif price_difference.zero?
-      "You will get more #{product_name} for the same price by buying the larger #{product_name}."
+    product_name = @large_item.item_name
+    small_item_price, large_item_price = @small_item.price, @large_item.price
+
+    if large_item_price > small_item_price * 2
+      savings = small_item_price * 2 - large_item_price
+      "You will save #{savings}sh by buying the larger #{product_name} instead of two small #{product_name}s."
+    elsif large_item_price < small_item_price * 2
+      extra_cost = large_item_price - small_item_price
+      "You will spend #{extra_cost.abs}sh more for the large #{product_name} but it offers more value than two small #{product_name}s."
     else
-      "You will spend #{price_difference.abs}sh more but get more #{product_name} by buying the larger #{product_name} instead of two small #{product_name}s."
+      "You will get the same value either buying two small #{product_name}s or the large #{product_name}."
     end
   end
 end

@@ -37,7 +37,7 @@ _To get a local copy up and running follow these simple steps._
 
 ### Testing
 
-`bundle exec rake test` will run all the tests.
+`bundle exec rake test` to run the tests.
 
 
 👤 **Ben**

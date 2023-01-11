@@ -19,7 +19,7 @@ class ItemComparison
     elsif difference > THRESHOLD
       "The larger #{product_name} is the better value. The smaller #{product_name} is #{(difference * 100).round(2)}% more expensive."
     else
-      "The two #{product_name}s are not significantly different in value. It is not worth spending more money on the larger #{product_name}."
+      "The two #{product_name}s are not significantly different in value."
     end
   end
 end
