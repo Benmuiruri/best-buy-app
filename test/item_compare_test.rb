@@ -2,8 +2,9 @@ require_relative 'test_helper'
 
 class ItemComparisonTest < Minitest::Test
   def setup
-    @small_item = Item.new(80, 100)
-    @large_item = Item.new(100, 200)
+    @small_item = Item.new("soda", 80, 100)
+    @large_item = Item.new("soda",100, 200)
+    @product_name = @small_item.item_name
   end
 
   def test_initialize
@@ -15,7 +16,7 @@ class ItemComparisonTest < Minitest::Test
   def test_compare
     item_comparison = ItemComparison.new(@small_item, @large_item)
     difference = ((@small_item.price_per_gram - @large_item.price_per_gram) / @large_item.price_per_gram) * 100
-    result = "The larger item is the better value. The smaller item is #{difference.round(2)}% more expensive."
+    result = "The larger #{@product_name } is the better value. The smaller #{@product_name } is #{difference.round(2)}% more expensive."
     assert_equal result, item_comparison.compare
   end
 end

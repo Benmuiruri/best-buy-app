@@ -4,8 +4,9 @@ class ItemDiscountTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    @small_item = Item.new(80, 100)
-    @large_item = Item.new(100, 200)
+    @small_item = Item.new("soda", 80, 100)
+    @large_item = Item.new("soda", 100, 200)
+    @product_name = @small_item.item_name
   end
 
   def test_initialize
@@ -17,7 +18,7 @@ class ItemDiscountTest < Minitest::Test
   def test_discount
     item_discount = ItemDiscount.new(@small_item, @large_item)
     price_difference = @small_item.price * 2 - @large_item.price
-    result = "You will save #{price_difference}sh by buying the larger item instead of two small items."
+    result = "You will spend #{price_difference}sh more but get more #{@product_name} by buying the larger #{@product_name} instead of two small #{@product_name}s."
     assert_equal result, item_discount.discount
   end
 end
