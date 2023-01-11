@@ -11,7 +11,8 @@ class ItemDiscount
 
   def discount
     product_name = @large_item.item_name
-    small_item_price, large_item_price = @small_item.price, @large_item.price
+    small_item_price = @small_item.price
+    large_item_price = @large_item.price
 
     if large_item_price > small_item_price * 2
       savings = small_item_price * 2 - large_item_price

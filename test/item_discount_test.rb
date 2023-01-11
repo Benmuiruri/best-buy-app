@@ -19,8 +19,8 @@ class ItemDiscountTest < Minitest::Test
 
   def test_discount
     item_discount = ItemDiscount.new(@small_item, @large_item)
-    price_difference = @small_item.price * 2 - @large_item.price
-    result = "You will spend #{price_difference}sh more but get more #{@product_name} by buying the larger #{@product_name} instead of two small #{@product_name}s."
+    price_difference = @large_item.price - @small_item.price
+    result = "You will spend #{price_difference}sh more for the large #{@product_name} but it offers more value than two small #{@product_name}s."
     assert_equal result, item_discount.discount
   end
 end
