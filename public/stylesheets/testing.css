@@ -144,20 +144,3 @@ input {
   font-weight: 500;
 }
 
-footer {
-  padding: 1em 0;
-}
-
-/* MOBILE STYLES */
-
-@media (max-width: 900px) {
-  .container {
-    width: auto;
-    margin: 0 1.5em;
-  }
-
-  .header-nav li {
-    padding: 0.5em 0;
-    margin: 0 0.5em;
-  }
-}

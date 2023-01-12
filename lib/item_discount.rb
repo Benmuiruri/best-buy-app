@@ -16,7 +16,7 @@ class ItemDiscount
 
     if large_item_price > small_item_price * 2
       savings = small_item_price * 2 - large_item_price
-      "You will save #{savings}sh by buying the larger #{product_name} instead of two small #{product_name}s."
+      "You will need an extra #{savings.abs}sh for the larger #{product_name} but its not worth it. "
     elsif large_item_price < small_item_price * 2
       extra_cost = large_item_price - small_item_price
       "You will spend #{extra_cost.abs}sh more for the large #{product_name} but it offers more value than two small #{product_name}s."
